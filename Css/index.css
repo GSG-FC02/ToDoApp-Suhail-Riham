@@ -6,11 +6,20 @@
 
 body {
   width: 90vw;
-  min-height: 100vh;
+  min-height: 80vh;
   display: flex;
   justify-content: center;
   background: linear-gradient(#b44360, #5a6dc2);
   font-family: sans-serif;
+}
+/*/ container /*/
+.container {
+  min-width: 250px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+  margin-left: 22px;
 }
 
 button:hover {
@@ -18,20 +27,6 @@ button:hover {
   background-color: #802d42;
 }
 
-ul {
-  list-style-type: none; /* get rid of bullet points on side of list items */
-}
-
-/* common style ends */
-
-/* container */
-.container {
-  min-width: 700px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  padding: 20px;
-}
 img {
   width: 150px;
   height: 110px;
@@ -43,23 +38,10 @@ h1 {
   font-family: "Merienda", cursive;
   margin-top: 15px;
 }
-
-/* todo-form */
-
+/*todo-form style */
 .todo-form {
   margin: 40px 0px;
 }
-
-.todo-input {
-  width: 220px;
-  border: none;
-  outline: none;
-  border-radius: 5px;
-  padding: 10px;
-  margin-right: 10px;
-  font-size: 1rem;
-}
-
 .add-button {
   background-color: #726cd8;
   color: #fff;
@@ -69,46 +51,58 @@ h1 {
   padding: 7px;
   font-size: 1.2rem;
 }
-
-/* todo-form style ends */
-
-/* todo-items */
-.todo-items {
-  min-width: 300px;
-}
-
-/* each li with class="item" */
-.item {
-  background-color: #fff;
-  padding: 10px;
-  font-size: 1.1rem;
-  height: 45px;
-}
-
-.item:first-child {
-  border-top-left-radius: 7px;
-  border-top-right-radius: 7px;
-}
-
-.item:last-child {
-  border-bottom-left-radius: 7px;
-  border-bottom-right-radius: 7px;
-}
-
-/* item style end */
-
-.delete-button {
-  float: right;
-  background-color: #dc143c;
+.todo-input {
+  width: 220px;
   border: none;
   outline: none;
-  border-radius: 7px;
-  padding: 2px 5px;
-  margin-left: 10px;
-  font-size: 1.1rem;
-  font-weight: 550;
+  border-radius: 5px;
+  padding: 10px;
+  font-size: 1rem;
+  margin-left: 1px;
+}
+ul {
+  list-style: none;
+  width: 250px;
+  border: none;
+  border-radius: 5px;
+  padding: 10px;
+  margin-right: 10px;
+  font-size: 1rem;
+  background-color: white;
+}
+li {
+  color: #899098;
+  border-bottom: 1px solid #cfcbcc;
+  padding: 8px 0;
+}
+li::before {
+  content: "\25A1";
+  padding: 10px 10px;
+  font-size: 20px;
+}
+li:hover {
+  text-decoration: line-through;
+  cursor: pointer;
+}
+li:last-child {
+  border-bottom: none;
 }
 
-/* todo-items style ends */
-
-/* container style ends */
+.checked {
+  color: green;
+}
+.checked:before {
+  content: "\2713";
+  padding: 10px 10px;
+  font-size: 1rem;
+}
+.checked:hover {
+  text-decoration: none;
+}
+.checked:after {
+  content: "(remove)";
+  color: tomato;
+  text-align: right;
+}
+/*/ todo-form style ends /*/
+/* container style end*/
